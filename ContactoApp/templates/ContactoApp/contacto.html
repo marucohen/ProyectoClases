@@ -1,0 +1,30 @@
+{% extends "ProyectoClasesApp/base.html" %}
+
+{% load static %}
+
+{% block content %} 
+
+<div class="contenedorFormulario">
+
+    {% if "valido" in request.GET %}
+
+        <p style="color:white; text-align: center;">Información enviada correctamente</p>
+
+
+    {% endif %}
+
+    <form action="" method="POST" style="text-align: center;">
+        {% csrf_token %}   
+        <table style="color:white; margin: 20px auto; font-family: 'Raleway'">{{miFormulario.as_table}}</table>
+        <input type="submit" value="Enviar" style="width: 150px;">
+
+    </form>
+
+</div>
+
+<p style= "font-family:'Raleway', sans-serif; text-transform: uppercase; color: black; font-size: 22px; margin: 20px; background-color: rgb(177, 152, 84); font-weight: bold; text-align: center;"> También podes contactarnos por estos medios: </p> 
+<p style= "font-family:'Raleway', sans-serif; text-transform: uppercase; color: black; font-size: 22px; margin: 20px; background-color: rgb(177, 152, 84); font-weight: bold; text-align: center;">Teléfono: +54 223 123456 </p>
+    <p style= "font-family:'Raleway', sans-serif; text-transform: uppercase; color: black; font-size: 22px; margin: 20px; background-color: rgb(177, 152, 84); font-weight: bold; text-align: center;"> E-mail: tusclasesparticulares@gmail.com </p>
+
+
+{% endblock %} 

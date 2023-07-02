@@ -1,0 +1,21 @@
+{% extends "ProyectoClasesApp/base.html" %}
+
+{% load static %}
+
+{% block content %} 
+
+    {% for clasesParticulares in clasesParticulares %}
+
+<div><p>
+
+    <h2 style= "font-family:'Raleway', sans-serif; text-transform: uppercase; color: white; background-color: rgb(132, 197, 154); font-weight: bold; text-align: center;">{{clasesParticulares.titulo}}</h2>
+    
+    <p style="text-align: center;">
+        <img src="{{ clasesParticulares.imagen.url }}" style="display: block; margin-left: auto; margin-right: auto;">
+      </p>
+    <p style= "font-family:'Raleway', sans-serif; color: white; margin: 20px; font-weight: bold; text-align: center;">{{clasesParticulares.contenido}}</p>
+    
+</p></div>
+
+    {% endfor %}
+{% endblock %} 
